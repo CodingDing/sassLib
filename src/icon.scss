@@ -1,0 +1,22 @@
+//纯css3实现图标
+
+/*
+* 三角形图标
+* @param {number} $size 图标的尺寸大小
+* @param {string} $direction 三角形的方向，支持的值有top,right,bottom,left
+* @param {string} $color 三角形的颜色
+**/
+@mixin triangle ($size, $direction, $color){
+    position: absolute;
+    border-width: $size + px;
+    @if $direction == top{
+        border-color: $color transparent transparent transparent;
+    } @else if $direction == right{
+        border-color: transparent $color transparent transparent;
+    }@else if $direction == bottom{
+        border-color: transparent transparent $color transparent;
+    }@else if $direction == left{
+        border-color: transparent transparent transparent $color ;
+    }
+}
+
