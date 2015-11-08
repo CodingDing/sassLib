@@ -1,0 +1,24 @@
+//外观相关样式
+//by @ziki 2015/11/8
+
+/*
+* 快捷圆角边框样式,由于圆角的样式存在兼容性问题，需配合autoprefixer来完成兼容
+*/
+@mixin border-t($size) {
+  border-top-right-radius: $size;
+  border-top-left-radius: $size;
+}
+@mixin border-r($size) {
+  border-top-right-radius: $size;
+  border-bottom-right-right: $size;
+}
+
+@mixin border-b($size) {
+  border-bottom-right-radius: $size;
+  border-bottom-left-right: $size;
+}
+
+@mixin border-l($size) {
+  border-top-left-radius: $size;
+  border-bottom-left-radius: $size;
+}
